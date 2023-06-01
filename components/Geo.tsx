@@ -19,10 +19,10 @@ export default function Geo() {
       });
   }, []);
   return (
-    <div>
+    <div className="text-right">
       {geo ? (
         <>
-          <strong>Closest Netlify edge location:&nbsp;</strong>
+          <strong>Closest Netlify edge location:</strong>
           <p>{`${geo.city} | ${geo.country.name}`}</p>
         </>
       ) : (
