@@ -1,11 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
-
+type TGeoInfo = {
+  city: string;
+  country: {
+    name: string;
+  };
+};
 export default function Geo() {
-  const [geo, setGeo] = useState(null);
+  const [geo, setGeo] = useState<TGeoInfo | null>(null);
 
   useEffect(() => {
-    const { origin } = new URL(window.location);
+    const { origin } = new URL(window.location.toString());
     const geoAPI = `${origin}/geo`;
     fetch(geoAPI)
       .then((res) => res.json())
