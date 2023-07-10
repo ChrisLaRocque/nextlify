@@ -1,3 +1,4 @@
+import "./darkmode.css";
 import Image from "next/image";
 import Geo from "@/components/Geo";
 
